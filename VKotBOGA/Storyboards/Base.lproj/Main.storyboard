@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YNq-L2-3z1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -49,6 +49,7 @@
                                         <state key="normal" title="Внутрь"/>
                                         <connections>
                                             <action selector="userLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ya8-i7-GXB"/>
+                                            <segue destination="YNq-L2-3z1" kind="show" id="2cU-56-QZS"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wJG-qk-cqB">
@@ -96,8 +97,67 @@
             </objects>
             <point key="canvasLocation" x="-146.37681159420291" y="77.678571428571431"/>
         </scene>
+        <!--NavController-->
+        <scene sceneID="EYC-4s-n6S">
+            <objects>
+                <tabBarController title="NavController" modalPresentationStyle="fullScreen" id="YNq-L2-3z1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BXk-am-koB"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tcf-Ll-nx0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nbr-GJ-Qlp" kind="relationship" relationship="viewControllers" id="kT1-Qv-FeJ"/>
+                        <segue destination="R7r-X0-VlK" kind="relationship" relationship="viewControllers" id="l7a-17-tl3"/>
+                        <segue destination="4jb-oc-ZZP" kind="relationship" relationship="viewControllers" id="w2T-G9-iBE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gV3-wR-ZGQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="843" y="88"/>
+        </scene>
+        <!--FriendsViewController-->
+        <scene sceneID="ebK-wG-MYm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Friends" referencedIdentifier="FriendsViewController" id="nbr-GJ-Qlp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Друзья" image="person.circle" catalog="system" id="T1X-AV-KjS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k51-MJ-0Hd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1733" y="-245"/>
+        </scene>
+        <!--GroupsViewController-->
+        <scene sceneID="BIn-Fj-uiS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Groups" referencedIdentifier="GroupsViewController" id="R7r-X0-VlK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Группы" image="person.2" catalog="system" id="2bW-LG-GC8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rXS-iP-vAH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1723" y="-35"/>
+        </scene>
+        <!--NewsViewController-->
+        <scene sceneID="1w9-TC-AmL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="News" referencedIdentifier="NewsViewController" id="4jb-oc-ZZP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Новости" image="newspaper" catalog="system" id="rTG-bq-Oc7">
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRS-t6-sD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1724" y="369"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="newspaper" catalog="system" width="128" height="108"/>
+        <image name="person.2" catalog="system" width="128" height="81"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
